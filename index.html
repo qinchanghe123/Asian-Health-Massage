@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
     content="Asian Health Massage in Larchwood, Iowa. Explore oil treatment massage, four hands massage, Swedish Touch with Reiki, foot reflexology, and table shower pricing."
   />
-  <meta name="theme-color" content="#10261f" />
+
+  <meta name="theme-color" content="#f7f2e8" />
+
   <title>Asian Health Massage | Larchwood, Iowa</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -19,32 +23,52 @@
 
   <style>
     /* =========================================================
-       1. ROOT / RESET
+       ROOT / RESET
     ========================================================= */
+
     :root {
-      --forest-950: #081510;
-      --forest-900: #0d211a;
-      --forest-850: #102820;
-      --forest-800: #16352b;
-      --forest-700: #234b3e;
-      --ivory: #f7f3ea;
-      --ivory-deep: #eee7da;
-      --sand: #d8c8af;
-      --gold: #c7a86b;
-      --gold-light: #e2c88e;
-      --gold-dark: #9d7c45;
-      --ink: #17201d;
-      --muted: #65706b;
+      --ivory-50: #fffdf8;
+      --ivory-100: #faf6ee;
+      --ivory-200: #f1e9dc;
+
+      --sage-50: #f1f5ef;
+      --sage-100: #e1e9df;
+      --sage-200: #cad8c8;
+      --sage-500: #718b76;
+      --sage-700: #3f5d49;
+      --sage-900: #20382a;
+
+      --gold-100: #f2e6ca;
+      --gold-300: #d9bd82;
+      --gold-500: #b88f4f;
+      --gold-700: #87652f;
+
+      --rose-50: #faf2ef;
+      --rose-100: #f1dfd8;
+
+      --ink: #26302b;
+      --muted: #68736d;
       --white: #ffffff;
-      --line: rgba(199, 168, 107, 0.28);
-      --shadow: 0 24px 70px rgba(7, 23, 17, 0.16);
-      --shadow-soft: 0 16px 44px rgba(7, 23, 17, 0.1);
-      --radius-lg: 32px;
-      --radius-md: 22px;
-      --radius-sm: 14px;
+
+      --line: rgba(32, 56, 42, 0.12);
+      --gold-line: rgba(184, 143, 79, 0.28);
+
+      --shadow:
+        0 24px 70px rgba(62, 70, 60, 0.12);
+
+      --shadow-soft:
+        0 14px 40px rgba(62, 70, 60, 0.09);
+
+      --radius-xl: 38px;
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 13px;
+
       --container: 1220px;
       --header-height: 82px;
-      --transition: 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+
+      --transition:
+        350ms cubic-bezier(0.2, 0.7, 0.2, 1);
     }
 
     *,
@@ -61,7 +85,7 @@
     body {
       margin: 0;
       overflow-x: hidden;
-      background: var(--ivory);
+      background: var(--ivory-50);
       color: var(--ink);
       font-family: "Manrope", sans-serif;
       line-height: 1.7;
@@ -90,6 +114,10 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    button {
+      color: inherit;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -99,7 +127,8 @@
     h2,
     h3,
     h4,
-    p {
+    p,
+    figure {
       margin-top: 0;
     }
 
@@ -108,8 +137,8 @@
     h3,
     h4 {
       font-family: "Cormorant Garamond", serif;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
+      line-height: 1.04;
+      letter-spacing: -0.025em;
     }
 
     section {
@@ -122,7 +151,7 @@
     }
 
     .section-space {
-      padding-block: clamp(84px, 10vw, 148px);
+      padding-block: clamp(82px, 10vw, 145px);
     }
 
     .section-heading {
@@ -130,37 +159,51 @@
       margin-bottom: clamp(38px, 6vw, 72px);
     }
 
+    .section-heading.centered {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-heading.centered .section-copy {
+      margin-inline: auto;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 18px;
-      color: var(--gold-dark);
-      font-size: 0.76rem;
+      margin-bottom: 17px;
+      color: var(--gold-700);
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.19em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
-      width: 34px;
+      width: 32px;
       height: 1px;
       background: currentColor;
       content: "";
     }
 
+    .section-heading.centered .eyebrow::before {
+      display: none;
+    }
+
     .section-title {
       margin-bottom: 20px;
-      color: var(--forest-900);
+      color: var(--sage-900);
       font-size: clamp(2.75rem, 6vw, 5.2rem);
       font-weight: 600;
+      text-wrap: balance;
     }
 
     .section-copy {
-      max-width: 670px;
+      max-width: 680px;
       margin-bottom: 0;
       color: var(--muted);
-      font-size: clamp(1rem, 1.4vw, 1.12rem);
+      font-size: clamp(0.98rem, 1.4vw, 1.12rem);
     }
 
     .button {
@@ -173,14 +216,14 @@
       border: 1px solid transparent;
       border-radius: 999px;
       cursor: pointer;
-      font-size: 0.84rem;
+      font-size: 0.79rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       transition:
         transform var(--transition),
-        background var(--transition),
         color var(--transition),
+        background var(--transition),
         border-color var(--transition),
         box-shadow var(--transition);
     }
@@ -189,42 +232,48 @@
       transform: translateY(-2px);
     }
 
-    .button-primary {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      box-shadow: 0 15px 35px rgba(199, 168, 107, 0.25);
-      color: var(--forest-950);
-    }
-
-    .button-primary:hover {
-      box-shadow: 0 19px 42px rgba(199, 168, 107, 0.36);
-    }
-
-    .button-outline {
-      border-color: rgba(255, 255, 255, 0.38);
-      color: var(--white);
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .button-outline:hover {
-      border-color: var(--gold-light);
-      background: rgba(199, 168, 107, 0.12);
-    }
-
-    .button-dark {
-      border-color: var(--forest-800);
-      background: var(--forest-900);
-      color: var(--ivory);
-    }
-
-    .button-dark:hover {
-      background: var(--forest-700);
-    }
-
     .button svg {
       width: 18px;
       height: 18px;
       flex: 0 0 auto;
+    }
+
+    .button-primary {
+      background:
+        linear-gradient(
+          135deg,
+          #e4ca95,
+          var(--gold-300)
+        );
+      box-shadow:
+        0 14px 32px rgba(184, 143, 79, 0.22);
+      color: var(--sage-900);
+    }
+
+    .button-primary:hover {
+      box-shadow:
+        0 18px 40px rgba(184, 143, 79, 0.3);
+    }
+
+    .button-outline {
+      border-color: rgba(32, 56, 42, 0.24);
+      background: rgba(255, 255, 255, 0.54);
+      color: var(--sage-900);
+      backdrop-filter: blur(12px);
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold-500);
+      background: var(--white);
+    }
+
+    .button-sage {
+      background: var(--sage-900);
+      color: var(--white);
+    }
+
+    .button-sage:hover {
+      background: var(--sage-700);
     }
 
     .reveal {
@@ -241,8 +290,9 @@
     }
 
     /* =========================================================
-       2. HEADER
+       HEADER
     ========================================================= */
+
     .site-header {
       position: fixed;
       z-index: 1000;
@@ -250,7 +300,7 @@
       left: 0;
       width: 100%;
       border-bottom: 1px solid transparent;
-      color: var(--white);
+      color: var(--sage-900);
       transition:
         background var(--transition),
         border-color var(--transition),
@@ -258,9 +308,10 @@
     }
 
     .site-header.scrolled {
-      border-color: rgba(199, 168, 107, 0.18);
-      background: rgba(8, 21, 16, 0.93);
-      box-shadow: 0 12px 42px rgba(0, 0, 0, 0.18);
+      border-color: rgba(32, 56, 42, 0.09);
+      background: rgba(255, 253, 248, 0.92);
+      box-shadow:
+        0 10px 36px rgba(49, 62, 53, 0.08);
       backdrop-filter: blur(18px);
     }
 
@@ -281,12 +332,13 @@
 
     .brand-mark {
       display: grid;
-      width: 41px;
-      height: 41px;
+      width: 42px;
+      height: 42px;
       place-items: center;
-      border: 1px solid rgba(226, 200, 142, 0.62);
+      border: 1px solid rgba(184, 143, 79, 0.55);
       border-radius: 50%;
-      color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--gold-700);
       font-family: "Cormorant Garamond", serif;
       font-size: 1.4rem;
       font-weight: 700;
@@ -299,6 +351,7 @@
     }
 
     .brand-copy strong {
+      color: var(--sage-900);
       font-family: "Cormorant Garamond", serif;
       font-size: clamp(1.2rem, 2vw, 1.48rem);
       font-weight: 600;
@@ -307,9 +360,9 @@
 
     .brand-copy span {
       margin-top: 4px;
-      color: rgba(255, 255, 255, 0.66);
+      color: var(--muted);
       font-size: 0.6rem;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
@@ -317,16 +370,16 @@
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: clamp(16px, 2vw, 30px);
+      gap: clamp(15px, 2vw, 28px);
     }
 
     .desktop-nav a {
       position: relative;
       padding-block: 10px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 0.75rem;
+      color: rgba(32, 56, 42, 0.72);
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       transition: color var(--transition);
     }
@@ -337,7 +390,7 @@
       bottom: 4px;
       left: 0;
       height: 1px;
-      background: var(--gold-light);
+      background: var(--gold-500);
       content: "";
       transform: scaleX(0);
       transform-origin: right;
@@ -345,7 +398,7 @@
     }
 
     .desktop-nav a:hover {
-      color: var(--white);
+      color: var(--sage-900);
     }
 
     .desktop-nav a:hover::after {
@@ -353,9 +406,9 @@
       transform-origin: left;
     }
 
-    .nav-book {
+    .nav-call {
       min-height: 44px;
-      padding: 10px 20px;
+      padding: 10px 19px;
     }
 
     .menu-toggle {
@@ -364,10 +417,9 @@
       height: 48px;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(32, 56, 42, 0.18);
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--white);
+      background: rgba(255, 255, 255, 0.65);
       cursor: pointer;
     }
 
@@ -377,8 +429,10 @@
       display: block;
       width: 19px;
       height: 1px;
-      background: currentColor;
-      transition: transform var(--transition), opacity var(--transition);
+      background: var(--sage-900);
+      transition:
+        transform var(--transition),
+        opacity var(--transition);
     }
 
     .menu-toggle span {
@@ -424,8 +478,10 @@
       max-height: calc(100vh - var(--header-height));
       overflow-y: auto;
       padding: 22px 20px 30px;
-      border-top: 1px solid rgba(199, 168, 107, 0.2);
-      background: rgba(8, 21, 16, 0.98);
+      border-top: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.98);
+      box-shadow:
+        0 20px 40px rgba(49, 62, 53, 0.08);
       backdrop-filter: blur(20px);
     }
 
@@ -436,11 +492,11 @@
 
     .mobile-menu a {
       display: block;
-      padding: 15px 5px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.9);
+      padding: 14px 5px;
+      border-bottom: 1px solid var(--line);
+      color: var(--sage-900);
       font-family: "Cormorant Garamond", serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
     }
 
     .mobile-menu .button {
@@ -455,6 +511,7 @@
         opacity: 0;
         transform: translateY(-12px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -462,20 +519,21 @@
     }
 
     /* =========================================================
-       3. HERO
+       HERO
     ========================================================= */
+
     .hero {
       min-height: 100svh;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
-      background: var(--forest-950);
-      color: var(--white);
+      background: var(--ivory-100);
+      color: var(--sage-900);
     }
 
     .hero-slides,
     .hero-overlay,
-    .hero-glow {
+    .hero-light {
       position: absolute;
       inset: 0;
     }
@@ -484,7 +542,7 @@
       position: absolute;
       inset: -3%;
       opacity: 0;
-      background-color: var(--forest-900);
+      background-color: var(--sage-100);
       background-position: center;
       background-size: cover;
       transform: scale(1.06);
@@ -500,15 +558,32 @@
 
     .hero-overlay {
       background:
-        linear-gradient(90deg, rgba(5, 16, 12, 0.92) 0%, rgba(5, 16, 12, 0.7) 45%, rgba(5, 16, 12, 0.28) 100%),
-        linear-gradient(0deg, rgba(5, 16, 12, 0.8) 0%, transparent 55%),
-        radial-gradient(circle at 80% 22%, rgba(199, 168, 107, 0.2), transparent 34%);
+        linear-gradient(
+          90deg,
+          rgba(255, 253, 248, 0.98) 0%,
+          rgba(255, 253, 248, 0.91) 34%,
+          rgba(255, 253, 248, 0.58) 64%,
+          rgba(255, 253, 248, 0.22) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(255, 253, 248, 0.9) 0%,
+          transparent 53%
+        );
     }
 
-    .hero-glow {
+    .hero-light {
       background:
-        radial-gradient(circle at 18% 72%, rgba(199, 168, 107, 0.14), transparent 26%),
-        radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.07), transparent 24%);
+        radial-gradient(
+          circle at 23% 70%,
+          rgba(217, 189, 130, 0.34),
+          transparent 26%
+        ),
+        radial-gradient(
+          circle at 78% 18%,
+          rgba(225, 233, 223, 0.42),
+          transparent 28%
+        );
       filter: blur(20px);
       pointer-events: none;
     }
@@ -518,43 +593,42 @@
       z-index: 2;
       width: 100%;
       padding-top: calc(var(--header-height) + 70px);
-      padding-bottom: clamp(54px, 8vw, 96px);
+      padding-bottom: clamp(50px, 7vw, 88px);
     }
 
     .hero-grid {
       display: grid;
       align-items: end;
-      grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.55fr);
-      gap: clamp(46px, 8vw, 120px);
+      grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(280px, 0.52fr);
+      gap: clamp(42px, 7vw, 110px);
     }
 
     .hero-main {
       max-width: 850px;
     }
 
-    .hero .eyebrow {
-      color: var(--gold-light);
-    }
-
     .hero-title {
-      max-width: 830px;
+      max-width: 820px;
       margin-bottom: 25px;
-      font-size: clamp(4rem, 9.5vw, 8.7rem);
+      color: var(--sage-900);
+      font-size: clamp(4rem, 9.5vw, 8.5rem);
       font-weight: 600;
-      line-height: 0.86;
+      line-height: 0.87;
       text-wrap: balance;
     }
 
     .hero-title em {
-      color: var(--gold-light);
+      color: var(--gold-700);
       font-weight: 500;
     }
 
     .hero-description {
-      max-width: 650px;
+      max-width: 640px;
       margin-bottom: 34px;
-      color: rgba(255, 255, 255, 0.74);
-      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      color: #54635b;
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
     }
 
     .hero-actions {
@@ -565,52 +639,55 @@
 
     .hero-aside {
       padding: 28px;
-      border: 1px solid rgba(226, 200, 142, 0.25);
-      border-radius: var(--radius-md);
-      background: rgba(13, 33, 26, 0.44);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
-      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 253, 248, 0.72);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(17px);
     }
 
     .hero-aside-label {
-      margin-bottom: 16px;
-      color: var(--gold-light);
-      font-size: 0.67rem;
+      margin-bottom: 15px;
+      color: var(--gold-700);
+      font-size: 0.66rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     .hero-aside h2 {
-      margin-bottom: 14px;
+      margin-bottom: 13px;
+      color: var(--sage-900);
       font-size: clamp(2rem, 3vw, 2.7rem);
       font-weight: 600;
     }
 
     .hero-aside p {
-      margin-bottom: 23px;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 0.92rem;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .hero-contact-row {
       display: grid;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .hero-contact-row a {
+    .hero-contact-row a,
+    .hero-contact-row div {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 14px;
       padding-block: 11px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.84rem;
+      border-top: 1px solid var(--line);
+      color: var(--sage-900);
+      font-size: 0.82rem;
     }
 
-    .hero-contact-row a span:last-child {
-      color: var(--gold-light);
+    .hero-contact-row span:last-child {
+      color: var(--gold-700);
+      text-align: right;
     }
 
     .hero-indicators {
@@ -621,12 +698,12 @@
 
     .hero-indicator {
       width: 34px;
-      height: 3px;
+      height: 4px;
       padding: 0;
       overflow: hidden;
       border: 0;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      background: rgba(32, 56, 42, 0.16);
       cursor: pointer;
     }
 
@@ -634,7 +711,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      background: var(--gold-light);
+      background: var(--gold-500);
       content: "";
       transform: scaleX(0);
       transform-origin: left;
@@ -648,9 +725,9 @@
     .trust-strip {
       position: relative;
       z-index: 3;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(5, 16, 12, 0.7);
-      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(32, 56, 42, 0.08);
+      background: rgba(255, 253, 248, 0.9);
+      backdrop-filter: blur(16px);
     }
 
     .trust-grid {
@@ -660,14 +737,14 @@
 
     .trust-item {
       display: flex;
-      min-height: 88px;
+      min-height: 86px;
       align-items: center;
       justify-content: center;
       gap: 12px;
       padding: 18px;
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 0.75rem;
+      border-right: 1px solid var(--line);
+      color: var(--sage-700);
+      font-size: 0.73rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-align: center;
@@ -679,28 +756,36 @@
     }
 
     .trust-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       flex: 0 0 auto;
       border-radius: 50%;
-      background: var(--gold-light);
-      box-shadow: 0 0 0 5px rgba(226, 200, 142, 0.1);
+      background: var(--gold-500);
+      box-shadow:
+        0 0 0 5px rgba(184, 143, 79, 0.1);
     }
 
     /* =========================================================
-       4. ABOUT
+       ABOUT
     ========================================================= */
+
     .about {
       overflow: hidden;
       background:
-        radial-gradient(circle at 90% 12%, rgba(199, 168, 107, 0.12), transparent 24%),
-        var(--ivory);
+        radial-gradient(
+          circle at 92% 10%,
+          rgba(217, 189, 130, 0.16),
+          transparent 25%
+        ),
+        var(--ivory-50);
     }
 
     .about-grid {
       display: grid;
       align-items: center;
-      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(0, 1.08fr);
       gap: clamp(48px, 8vw, 110px);
     }
 
@@ -712,8 +797,8 @@
     .about-image {
       position: absolute;
       overflow: hidden;
-      border-radius: var(--radius-lg);
-      background: var(--forest-800);
+      border-radius: var(--radius-xl);
+      background: var(--sage-100);
       box-shadow: var(--shadow);
     }
 
@@ -736,37 +821,33 @@
       bottom: 0;
       width: 48%;
       height: 46%;
-      border: 8px solid var(--ivory);
+      border: 8px solid var(--ivory-50);
     }
 
     .about-seal {
       position: absolute;
       z-index: 3;
       top: 8%;
-      right: 6%;
+      right: 5%;
       display: grid;
-      width: 144px;
-      height: 144px;
+      width: 145px;
+      height: 145px;
       place-items: center;
-      border: 1px solid rgba(199, 168, 107, 0.5);
+      border: 1px solid rgba(184, 143, 79, 0.38);
       border-radius: 50%;
-      background: rgba(247, 243, 234, 0.91);
+      background: rgba(255, 253, 248, 0.92);
       box-shadow: var(--shadow-soft);
-      color: var(--forest-900);
+      color: var(--sage-900);
       text-align: center;
       backdrop-filter: blur(12px);
     }
 
     .about-seal span {
-      max-width: 90px;
+      max-width: 95px;
       font-family: "Cormorant Garamond", serif;
-      font-size: 1.15rem;
+      font-size: 1.14rem;
       font-weight: 600;
-      line-height: 1.15;
-    }
-
-    .about-content .section-title {
-      max-width: 650px;
+      line-height: 1.16;
     }
 
     .about-content > p {
@@ -775,7 +856,7 @@
 
     .about-highlights {
       display: grid;
-      gap: 14px;
+      gap: 13px;
       margin-top: 38px;
     }
 
@@ -785,11 +866,11 @@
       grid-template-columns: 48px 1fr;
       gap: 17px;
       padding: 20px 0;
-      border-top: 1px solid rgba(13, 33, 26, 0.12);
+      border-top: 1px solid var(--line);
     }
 
     .highlight-number {
-      color: var(--gold-dark);
+      color: var(--gold-700);
       font-family: "Cormorant Garamond", serif;
       font-size: 1.4rem;
       font-weight: 700;
@@ -797,67 +878,53 @@
 
     .about-highlight h3 {
       margin-bottom: 6px;
-      color: var(--forest-900);
+      color: var(--sage-900);
       font-size: 1.55rem;
     }
 
     .about-highlight p {
       margin-bottom: 0;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.91rem;
     }
 
     /* =========================================================
-       5. EXPERIENCE
+       EXPERIENCE
     ========================================================= */
+
     .experience {
       overflow: hidden;
-      background: var(--forest-900);
-      color: var(--white);
-    }
-
-    .experience::before {
-      position: absolute;
-      inset: 0;
       background:
-        linear-gradient(rgba(8, 21, 16, 0.9), rgba(8, 21, 16, 0.94)),
-        url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg")
-          center / cover fixed;
-      content: "";
-    }
-
-    .experience .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .experience .section-title {
-      color: var(--white);
-    }
-
-    .experience .section-copy {
-      color: rgba(255, 255, 255, 0.66);
-    }
-
-    .experience .eyebrow {
-      color: var(--gold-light);
+        radial-gradient(
+          circle at 12% 12%,
+          rgba(217, 189, 130, 0.2),
+          transparent 24%
+        ),
+        linear-gradient(
+          135deg,
+          var(--sage-50),
+          var(--ivory-100)
+        );
     }
 
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      border: 1px solid rgba(226, 200, 142, 0.18);
-      border-radius: var(--radius-lg);
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(32, 56, 42, 0.09);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow-soft);
       backdrop-filter: blur(12px);
     }
 
     .experience-card {
-      min-height: 355px;
+      min-height: 350px;
       padding: clamp(28px, 3.5vw, 42px);
-      border-right: 1px solid rgba(226, 200, 142, 0.16);
-      transition: background var(--transition), transform var(--transition);
+      border-right: 1px solid var(--line);
+      transition:
+        background var(--transition),
+        transform var(--transition);
     }
 
     .experience-card:last-child {
@@ -865,42 +932,49 @@
     }
 
     .experience-card:hover {
-      background: rgba(199, 168, 107, 0.08);
+      background: rgba(225, 233, 223, 0.6);
     }
 
     .experience-step {
       display: inline-flex;
-      width: 48px;
-      height: 48px;
+      width: 49px;
+      height: 49px;
       align-items: center;
       justify-content: center;
-      margin-bottom: 68px;
-      border: 1px solid rgba(226, 200, 142, 0.34);
+      margin-bottom: 66px;
+      border: 1px solid rgba(184, 143, 79, 0.36);
       border-radius: 50%;
-      color: var(--gold-light);
+      background: var(--ivory-50);
+      color: var(--gold-700);
       font-family: "Cormorant Garamond", serif;
       font-size: 1.25rem;
     }
 
     .experience-card h3 {
       margin-bottom: 14px;
+      color: var(--sage-900);
       font-size: clamp(1.8rem, 2.7vw, 2.3rem);
       font-weight: 600;
     }
 
     .experience-card p {
       margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.62);
+      color: var(--muted);
       font-size: 0.9rem;
     }
 
     /* =========================================================
-       6. SERVICES
+       SERVICES
     ========================================================= */
+
     .services {
       background:
-        radial-gradient(circle at 10% 30%, rgba(199, 168, 107, 0.1), transparent 22%),
-        #fbf8f2;
+        radial-gradient(
+          circle at 8% 24%,
+          rgba(217, 189, 130, 0.12),
+          transparent 22%
+        ),
+        var(--ivory-50);
     }
 
     .service-list {
@@ -912,14 +986,16 @@
       display: grid;
       min-height: 510px;
       overflow: hidden;
-      border: 1px solid rgba(13, 33, 26, 0.08);
-      border-radius: var(--radius-lg);
+      border: 1px solid rgba(32, 56, 42, 0.08);
+      border-radius: var(--radius-xl);
       background: var(--white);
       box-shadow: var(--shadow-soft);
-      grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      grid-template-columns:
+        minmax(0, 1.02fr)
+        minmax(0, 0.98fr);
     }
 
-    .service-card:nth-child(even) .service-carousel {
+    .service-card:nth-child(even) .service-media {
       order: 2;
     }
 
@@ -927,11 +1003,11 @@
       order: 1;
     }
 
-    .service-carousel {
+    .service-media {
       position: relative;
       min-height: 510px;
       overflow: hidden;
-      background: var(--forest-800);
+      background: var(--sage-100);
     }
 
     .service-slide {
@@ -948,7 +1024,7 @@
     .service-slide img {
       height: 100%;
       object-fit: cover;
-      transform: scale(1.03);
+      transform: scale(1.035);
       transition: transform 6500ms linear;
     }
 
@@ -956,12 +1032,32 @@
       transform: scale(1);
     }
 
-    .service-carousel::after {
+    .service-media::after {
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(5, 16, 12, 0.45), transparent 45%);
+      background:
+        linear-gradient(
+          0deg,
+          rgba(32, 56, 42, 0.28),
+          transparent 45%
+        );
       content: "";
       pointer-events: none;
+    }
+
+    .single-service-image {
+      position: absolute;
+      inset: 0;
+    }
+
+    .single-service-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 900ms ease;
+    }
+
+    .service-media:hover .single-service-image img {
+      transform: scale(1.035);
     }
 
     .carousel-controls {
@@ -976,21 +1072,23 @@
 
     .carousel-button {
       display: grid;
-      width: 43px;
-      height: 43px;
+      width: 44px;
+      height: 44px;
       place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.68);
       border-radius: 50%;
-      background: rgba(5, 16, 12, 0.45);
-      color: var(--white);
+      background: rgba(255, 253, 248, 0.76);
+      color: var(--sage-900);
       cursor: pointer;
-      backdrop-filter: blur(10px);
-      transition: background var(--transition), border-color var(--transition);
+      backdrop-filter: blur(12px);
+      transition:
+        background var(--transition),
+        border-color var(--transition);
     }
 
     .carousel-button:hover {
-      border-color: var(--gold-light);
-      background: rgba(199, 168, 107, 0.22);
+      border-color: var(--gold-500);
+      background: var(--white);
     }
 
     .carousel-button svg {
@@ -1013,15 +1111,17 @@
       padding: 0;
       border: 0;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.7);
       cursor: pointer;
-      transition: width var(--transition), background var(--transition);
+      transition:
+        width var(--transition),
+        background var(--transition);
     }
 
     .carousel-dot.is-active {
-      width: 25px;
+      width: 26px;
       border-radius: 20px;
-      background: var(--gold-light);
+      background: var(--gold-300);
     }
 
     .service-content {
@@ -1033,8 +1133,8 @@
 
     .service-label {
       margin-bottom: 16px;
-      color: var(--gold-dark);
-      font-size: 0.68rem;
+      color: var(--gold-700);
+      font-size: 0.67rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -1042,24 +1142,24 @@
 
     .service-content h3 {
       margin-bottom: 20px;
-      color: var(--forest-900);
+      color: var(--sage-900);
       font-size: clamp(2.45rem, 4.5vw, 4rem);
       font-weight: 600;
     }
 
     .service-description {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
     .service-benefit {
       margin-bottom: 25px;
       padding: 17px 19px;
-      border-left: 2px solid var(--gold);
-      background: var(--ivory);
-      color: var(--forest-700);
-      font-size: 0.88rem;
+      border-left: 2px solid var(--gold-500);
+      background: var(--ivory-100);
+      color: var(--sage-700);
+      font-size: 0.87rem;
     }
 
     .price-list {
@@ -1078,15 +1178,15 @@
       justify-content: space-between;
       gap: 12px;
       padding: 12px 14px;
-      border: 1px solid rgba(13, 33, 26, 0.1);
+      border: 1px solid rgba(32, 56, 42, 0.1);
       border-radius: 12px;
-      background: #fcfaf6;
-      color: var(--forest-900);
-      font-size: 0.86rem;
+      background: var(--ivory-50);
+      color: var(--sage-900);
+      font-size: 0.85rem;
     }
 
     .price-list strong {
-      color: var(--gold-dark);
+      color: var(--gold-700);
       font-size: 0.98rem;
       white-space: nowrap;
     }
@@ -1096,10 +1196,10 @@
       width: fit-content;
       align-items: center;
       gap: 10px;
-      color: var(--forest-900);
-      font-size: 0.75rem;
+      color: var(--sage-900);
+      font-size: 0.73rem;
       font-weight: 700;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
@@ -1111,38 +1211,31 @@
       transform: translateX(5px);
     }
 
-    .service-card.compact-service {
-      min-height: 400px;
+    .compact-service {
+      min-height: 430px;
     }
 
-    .compact-service .service-carousel {
-      min-height: 400px;
+    .compact-service .service-media {
+      min-height: 430px;
     }
 
     /* =========================================================
-       7. ATMOSPHERE GALLERY
+       GALLERY
     ========================================================= */
+
     .gallery {
       overflow: hidden;
-      background: var(--forest-950);
-      color: var(--white);
-    }
-
-    .gallery .section-title {
-      color: var(--white);
-    }
-
-    .gallery .section-copy {
-      color: rgba(255, 255, 255, 0.62);
-    }
-
-    .gallery .eyebrow {
-      color: var(--gold-light);
+      background:
+        linear-gradient(
+          135deg,
+          var(--rose-50),
+          var(--sage-50)
+        );
     }
 
     .gallery-grid {
       display: grid;
-      min-height: 760px;
+      min-height: 740px;
       grid-template-columns: 1.2fr 0.8fr 0.8fr;
       grid-template-rows: repeat(2, 1fr);
       gap: 16px;
@@ -1152,8 +1245,9 @@
       position: relative;
       min-height: 260px;
       overflow: hidden;
-      border-radius: var(--radius-md);
-      background: var(--forest-800);
+      border-radius: var(--radius-lg);
+      background: var(--sage-100);
+      box-shadow: var(--shadow-soft);
     }
 
     .gallery-item:first-child {
@@ -1167,18 +1261,25 @@
     .gallery-item img {
       height: 100%;
       object-fit: cover;
-      transition: transform 900ms ease, filter 900ms ease;
+      transition:
+        transform 900ms ease,
+        filter 900ms ease;
     }
 
     .gallery-item::after {
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(5, 16, 12, 0.46), transparent 50%);
+      background:
+        linear-gradient(
+          0deg,
+          rgba(32, 56, 42, 0.38),
+          transparent 52%
+        );
       content: "";
     }
 
     .gallery-item:hover img {
-      filter: saturate(0.85);
+      filter: saturate(0.9);
       transform: scale(1.05);
     }
 
@@ -1202,205 +1303,120 @@
     }
 
     .gallery-caption span:last-child {
-      color: var(--gold-light);
-      font-size: 0.64rem;
+      color: #f5ddae;
+      font-size: 0.63rem;
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
 
     /* =========================================================
-       8. BOOKING
+       CALL TO ACTION — NO FORM
     ========================================================= */
-    .booking {
-      background:
-        radial-gradient(circle at 85% 10%, rgba(199, 168, 107, 0.14), transparent 28%),
-        var(--ivory);
+
+    .reservation {
+      background: var(--ivory-50);
     }
 
-    .booking-shell {
+    .reservation-shell {
+      position: relative;
       display: grid;
       overflow: hidden;
-      border-radius: var(--radius-lg);
-      background: var(--white);
-      box-shadow: var(--shadow);
-      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    }
-
-    .booking-intro {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(38px, 6vw, 72px);
+      border: 1px solid rgba(32, 56, 42, 0.09);
+      border-radius: var(--radius-xl);
       background:
-        linear-gradient(rgba(8, 21, 16, 0.8), rgba(8, 21, 16, 0.94)),
-        url("https://i.pinimg.com/736x/e6/0b/e7/e60be71086090d2d3f2737b2291242a9.jpg")
-          center / cover;
-      color: var(--white);
+        linear-gradient(
+          120deg,
+          rgba(241, 245, 239, 0.98),
+          rgba(250, 246, 238, 0.98)
+        );
+      box-shadow: var(--shadow);
+      grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(320px, 0.72fr);
     }
 
-    .booking-intro .eyebrow {
-      color: var(--gold-light);
+    .reservation-shell::before {
+      position: absolute;
+      top: -150px;
+      right: 20%;
+      width: 370px;
+      height: 370px;
+      border-radius: 50%;
+      background: rgba(217, 189, 130, 0.17);
+      filter: blur(18px);
+      content: "";
     }
 
-    .booking-intro h2 {
-      margin-bottom: 21px;
-      font-size: clamp(2.8rem, 5.3vw, 4.8rem);
+    .reservation-copy {
+      position: relative;
+      z-index: 1;
+      padding: clamp(42px, 7vw, 82px);
+    }
+
+    .reservation-copy h2 {
+      max-width: 700px;
+      margin-bottom: 20px;
+      color: var(--sage-900);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
       font-weight: 600;
     }
 
-    .booking-intro > p {
-      color: rgba(255, 255, 255, 0.66);
+    .reservation-copy p {
+      max-width: 650px;
+      margin-bottom: 31px;
+      color: var(--muted);
     }
 
-    .booking-details {
+    .reservation-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .reservation-details {
+      position: relative;
+      z-index: 1;
       display: grid;
-      gap: 14px;
-      margin-top: 42px;
+      align-content: center;
+      padding: clamp(36px, 5vw, 62px);
+      border-left: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.54);
     }
 
-    .booking-detail {
-      padding: 18px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.13);
+    .reservation-detail {
+      padding: 19px 0;
+      border-top: 1px solid var(--line);
     }
 
-    .booking-detail span {
+    .reservation-detail:first-child {
+      border-top: 0;
+    }
+
+    .reservation-detail span {
       display: block;
       margin-bottom: 5px;
-      color: var(--gold-light);
+      color: var(--gold-700);
       font-size: 0.64rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    .booking-detail strong,
-    .booking-detail a {
-      color: var(--white);
+    .reservation-detail strong,
+    .reservation-detail a {
+      color: var(--sage-900);
       font-size: 0.94rem;
       font-weight: 600;
     }
 
-    .booking-form {
-      padding: clamp(38px, 6vw, 72px);
-    }
-
-    .form-heading {
-      margin-bottom: 32px;
-    }
-
-    .form-heading h3 {
-      margin-bottom: 10px;
-      color: var(--forest-900);
-      font-size: clamp(2.1rem, 3.5vw, 3rem);
-    }
-
-    .form-heading p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .form-field {
-      min-width: 0;
-    }
-
-    .form-field.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .form-field label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--forest-900);
-      font-size: 0.73rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      width: 100%;
-      min-height: 52px;
-      padding: 13px 15px;
-      border: 1px solid rgba(13, 33, 26, 0.15);
-      border-radius: 12px;
-      outline: none;
-      background: #fdfbf7;
-      color: var(--ink);
-      transition:
-        border-color var(--transition),
-        box-shadow var(--transition),
-        background var(--transition);
-    }
-
-    .form-field textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      border-color: var(--gold);
-      background: var(--white);
-      box-shadow: 0 0 0 4px rgba(199, 168, 107, 0.12);
-    }
-
-    .form-actions {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .form-note {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.75rem;
-    }
-
-    .form-status {
-      display: none;
-      margin-top: 20px;
-      padding: 14px 16px;
-      border: 1px solid rgba(35, 75, 62, 0.2);
-      border-radius: 12px;
-      background: rgba(35, 75, 62, 0.07);
-      color: var(--forest-700);
-      font-size: 0.87rem;
-    }
-
-    .form-status.is-visible {
-      display: block;
-    }
-
     /* =========================================================
-       9. REVIEWS
+       REVIEWS
     ========================================================= */
+
     .reviews {
       overflow: hidden;
-      background: #eee7da;
-    }
-
-    .reviews .section-heading {
-      margin-inline: auto;
-      text-align: center;
-    }
-
-    .reviews .eyebrow::before {
-      display: none;
-    }
-
-    .reviews .section-copy {
-      margin-inline: auto;
+      background: var(--ivory-200);
     }
 
     .marquee {
@@ -1431,25 +1447,26 @@
       width: min(390px, calc(100vw - 42px));
       flex: 0 0 auto;
       padding: 28px;
-      border: 1px solid rgba(13, 33, 26, 0.08);
+      border: 1px solid rgba(32, 56, 42, 0.07);
       border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.74);
-      box-shadow: 0 12px 34px rgba(7, 23, 17, 0.06);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow:
+        0 12px 34px rgba(62, 70, 60, 0.06);
       backdrop-filter: blur(12px);
     }
 
     .review-stars {
       margin-bottom: 18px;
-      color: var(--gold-dark);
+      color: var(--gold-700);
       font-size: 0.8rem;
       letter-spacing: 0.15em;
     }
 
     .review-card blockquote {
       margin: 0 0 22px;
-      color: var(--forest-900);
+      color: var(--sage-900);
       font-family: "Cormorant Garamond", serif;
-      font-size: 1.35rem;
+      font-size: 1.34rem;
       line-height: 1.35;
     }
 
@@ -1458,7 +1475,7 @@
       align-items: center;
       gap: 11px;
       color: var(--muted);
-      font-size: 0.73rem;
+      font-size: 0.71rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1467,7 +1484,7 @@
     .review-author::before {
       width: 24px;
       height: 1px;
-      background: var(--gold);
+      background: var(--gold-500);
       content: "";
     }
 
@@ -1478,16 +1495,19 @@
     }
 
     /* =========================================================
-       10. FAQ
+       FAQ
     ========================================================= */
+
     .faq {
-      background: var(--ivory);
+      background: var(--ivory-50);
     }
 
     .faq-layout {
       display: grid;
       align-items: start;
-      grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+      grid-template-columns:
+        minmax(0, 0.65fr)
+        minmax(0, 1.35fr);
       gap: clamp(50px, 9vw, 130px);
     }
 
@@ -1497,11 +1517,11 @@
     }
 
     .faq-list {
-      border-top: 1px solid rgba(13, 33, 26, 0.15);
+      border-top: 1px solid var(--line);
     }
 
     .faq-item {
-      border-bottom: 1px solid rgba(13, 33, 26, 0.15);
+      border-bottom: 1px solid var(--line);
     }
 
     .faq-question {
@@ -1512,7 +1532,7 @@
       padding: 22px 0;
       border: 0;
       background: transparent;
-      color: var(--forest-900);
+      color: var(--sage-900);
       cursor: pointer;
       grid-template-columns: 1fr 42px;
       gap: 24px;
@@ -1531,8 +1551,9 @@
       width: 38px;
       height: 38px;
       place-items: center;
-      border: 1px solid rgba(13, 33, 26, 0.16);
+      border: 1px solid rgba(32, 56, 42, 0.16);
       border-radius: 50%;
+      background: var(--white);
     }
 
     .faq-icon::before,
@@ -1540,7 +1561,7 @@
       position: absolute;
       width: 13px;
       height: 1px;
-      background: var(--forest-900);
+      background: var(--sage-900);
       content: "";
       transition: transform var(--transition);
     }
@@ -1563,42 +1584,32 @@
       max-width: 720px;
       padding: 0 65px 27px 0;
       color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
     }
 
     /* =========================================================
-       11. CONTACT
+       CONTACT
     ========================================================= */
+
     .contact {
-      padding-bottom: clamp(80px, 10vw, 130px);
-      background: var(--forest-900);
-      color: var(--white);
-    }
-
-    .contact-top {
-      padding-top: clamp(84px, 10vw, 140px);
-      padding-bottom: clamp(42px, 6vw, 72px);
-    }
-
-    .contact .section-title {
-      color: var(--white);
-    }
-
-    .contact .section-copy {
-      color: rgba(255, 255, 255, 0.64);
-    }
-
-    .contact .eyebrow {
-      color: var(--gold-light);
+      background:
+        linear-gradient(
+          135deg,
+          var(--sage-50),
+          var(--ivory-100)
+        );
     }
 
     .contact-grid {
       display: grid;
       overflow: hidden;
-      border: 1px solid rgba(226, 200, 142, 0.18);
-      border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.03);
-      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      border: 1px solid rgba(32, 56, 42, 0.09);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      grid-template-columns:
+        minmax(0, 0.72fr)
+        minmax(0, 1.28fr);
     }
 
     .contact-details {
@@ -1607,20 +1618,21 @@
 
     .contact-details h3 {
       margin-bottom: 28px;
+      color: var(--sage-900);
       font-size: clamp(2.2rem, 4vw, 3.5rem);
       font-weight: 600;
     }
 
     .contact-card {
       padding: 20px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.11);
+      border-top: 1px solid var(--line);
     }
 
     .contact-card span {
       display: block;
       margin-bottom: 6px;
-      color: var(--gold-light);
-      font-size: 0.65rem;
+      color: var(--gold-700);
+      font-size: 0.64rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -1630,7 +1642,7 @@
     .contact-card p,
     .contact-card a {
       margin: 0;
-      color: rgba(255, 255, 255, 0.82);
+      color: var(--sage-700);
       font-style: normal;
       font-size: 0.94rem;
     }
@@ -1644,7 +1656,7 @@
 
     .map-shell {
       min-height: 540px;
-      background: #d9d5cc;
+      background: var(--sage-100);
     }
 
     .map-shell iframe {
@@ -1653,16 +1665,20 @@
       height: 100%;
       min-height: 540px;
       border: 0;
-      filter: grayscale(0.6) sepia(0.14) contrast(0.95);
+      filter:
+        grayscale(0.45)
+        sepia(0.1)
+        brightness(1.05);
     }
 
     /* =========================================================
-       12. FOOTER
+       FOOTER
     ========================================================= */
+
     .site-footer {
-      border-top: 1px solid rgba(226, 200, 142, 0.15);
-      background: var(--forest-950);
-      color: var(--white);
+      border-top: 1px solid var(--line);
+      background: var(--ivory-50);
+      color: var(--sage-900);
     }
 
     .footer-main {
@@ -1679,15 +1695,15 @@
     .footer-brand p {
       max-width: 440px;
       margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.55);
-      font-size: 0.88rem;
+      color: var(--muted);
+      font-size: 0.87rem;
     }
 
     .footer-column h3 {
       margin-bottom: 20px;
-      color: var(--gold-light);
+      color: var(--gold-700);
       font-family: "Manrope", sans-serif;
-      font-size: 0.67rem;
+      font-size: 0.66rem;
       letter-spacing: 0.17em;
       text-transform: uppercase;
     }
@@ -1700,13 +1716,13 @@
     .footer-links a,
     .footer-links span {
       width: fit-content;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 0.86rem;
+      color: var(--muted);
+      font-size: 0.85rem;
       transition: color var(--transition);
     }
 
     .footer-links a:hover {
-      color: var(--gold-light);
+      color: var(--gold-700);
     }
 
     .footer-bottom {
@@ -1715,26 +1731,27 @@
       justify-content: space-between;
       gap: 20px;
       padding-block: 22px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.42);
-      font-size: 0.72rem;
+      border-top: 1px solid var(--line);
+      color: #7c857f;
+      font-size: 0.71rem;
     }
 
     /* =========================================================
-       13. RESPONSIVE
+       RESPONSIVE
     ========================================================= */
+
     @media (max-width: 1100px) {
       .desktop-nav {
-        gap: 14px;
+        gap: 13px;
       }
 
       .desktop-nav a {
-        font-size: 0.67rem;
+        font-size: 0.65rem;
       }
 
       .hero-grid {
-        grid-template-columns: 1fr 320px;
-        gap: 45px;
+        grid-template-columns: 1fr 315px;
+        gap: 42px;
       }
 
       .experience-grid {
@@ -1746,7 +1763,7 @@
       }
 
       .experience-card:nth-child(-n + 2) {
-        border-bottom: 1px solid rgba(226, 200, 142, 0.16);
+        border-bottom: 1px solid var(--line);
       }
 
       .gallery-grid {
@@ -1760,7 +1777,7 @@
       }
 
       .desktop-nav,
-      .nav-shell > .nav-book {
+      .nav-shell > .nav-call {
         display: none;
       }
 
@@ -1780,7 +1797,7 @@
 
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 38px;
       }
 
       .hero-main {
@@ -1800,11 +1817,11 @@
       }
 
       .trust-item:nth-child(-n + 2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid var(--line);
       }
 
       .about-grid,
-      .booking-shell,
+      .reservation-shell,
       .faq-layout,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -1819,13 +1836,13 @@
         grid-template-columns: 1fr;
       }
 
-      .service-card:nth-child(even) .service-carousel,
+      .service-card:nth-child(even) .service-media,
       .service-card:nth-child(even) .service-content {
         order: initial;
       }
 
-      .service-carousel,
-      .compact-service .service-carousel {
+      .service-media,
+      .compact-service .service-media {
         min-height: 480px;
       }
 
@@ -1841,6 +1858,11 @@
 
       .gallery-item:nth-child(4) {
         grid-column: 1 / 3;
+      }
+
+      .reservation-details {
+        border-top: 1px solid var(--line);
+        border-left: 0;
       }
 
       .faq-intro {
@@ -1867,7 +1889,7 @@
       }
 
       .section-space {
-        padding-block: 78px;
+        padding-block: 76px;
       }
 
       .brand-copy span {
@@ -1875,26 +1897,30 @@
       }
 
       .brand-copy strong {
-        font-size: 1.15rem;
+        font-size: 1.13rem;
       }
 
       .hero-content {
-        min-height: 830px;
+        min-height: 820px;
         padding-bottom: 42px;
       }
 
       .hero-overlay {
         background:
-          linear-gradient(0deg, rgba(5, 16, 12, 0.9) 0%, rgba(5, 16, 12, 0.55) 65%, rgba(5, 16, 12, 0.4) 100%),
-          linear-gradient(90deg, rgba(5, 16, 12, 0.65), rgba(5, 16, 12, 0.15));
+          linear-gradient(
+            0deg,
+            rgba(255, 253, 248, 0.98) 0%,
+            rgba(255, 253, 248, 0.84) 62%,
+            rgba(255, 253, 248, 0.48) 100%
+          );
       }
 
       .hero-title {
-        font-size: clamp(3.55rem, 19vw, 5.4rem);
+        font-size: clamp(3.5rem, 19vw, 5.35rem);
       }
 
       .hero-description {
-        font-size: 0.96rem;
+        font-size: 0.95rem;
       }
 
       .hero-actions {
@@ -1911,9 +1937,9 @@
       }
 
       .trust-item {
-        min-height: 76px;
-        padding: 15px 9px;
-        font-size: 0.62rem;
+        min-height: 75px;
+        padding: 15px 8px;
+        font-size: 0.61rem;
       }
 
       .about-collage {
@@ -1937,7 +1963,7 @@
       }
 
       .about-seal span {
-        font-size: 0.98rem;
+        font-size: 0.97rem;
       }
 
       .experience-grid {
@@ -1946,9 +1972,9 @@
 
       .experience-card,
       .experience-card:nth-child(2) {
-        min-height: 280px;
+        min-height: 275px;
         border-right: 0;
-        border-bottom: 1px solid rgba(226, 200, 142, 0.16);
+        border-bottom: 1px solid var(--line);
       }
 
       .experience-card:last-child {
@@ -1956,12 +1982,12 @@
       }
 
       .experience-step {
-        margin-bottom: 45px;
+        margin-bottom: 43px;
       }
 
-      .service-carousel,
-      .compact-service .service-carousel {
-        min-height: 320px;
+      .service-media,
+      .compact-service .service-media {
+        min-height: 330px;
       }
 
       .service-content {
@@ -1969,7 +1995,7 @@
       }
 
       .service-content h3 {
-        font-size: 2.45rem;
+        font-size: 2.42rem;
       }
 
       .price-list {
@@ -1995,20 +2021,12 @@
         min-height: 460px;
       }
 
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-field.full-width {
-        grid-column: auto;
-      }
-
-      .form-actions {
+      .reservation-actions {
         align-items: stretch;
         flex-direction: column;
       }
 
-      .form-actions .button {
+      .reservation-actions .button {
         width: 100%;
       }
 
@@ -2066,10 +2084,6 @@
         opacity: 1;
         transform: none;
       }
-
-      .experience::before {
-        background-attachment: scroll;
-      }
     }
   </style>
 </head>
@@ -2078,10 +2092,12 @@
   <!-- =======================================================
        HEADER
   ======================================================== -->
+
   <header class="site-header" id="siteHeader">
     <div class="container nav-shell">
       <a class="brand" href="#home" aria-label="Asian Health Massage home">
         <span class="brand-mark" aria-hidden="true">A</span>
+
         <span class="brand-copy">
           <strong>Asian Health Massage</strong>
           <span>Larchwood, Iowa</span>
@@ -2098,7 +2114,9 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="button button-primary nav-book" href="#booking">Book Now</a>
+      <a class="button button-primary nav-call" href="tel:+17124772828">
+        Book by Phone
+      </a>
 
       <button
         class="menu-toggle"
@@ -2121,35 +2139,54 @@
     <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a class="button button-primary" href="#booking">Book Now</a>
+
+    <a class="button button-primary" href="tel:+17124772828">
+      Book by Phone
+    </a>
   </nav>
 
   <main>
     <!-- =====================================================
          HERO
     ====================================================== -->
+
     <section class="hero" id="home" aria-labelledby="heroTitle">
       <div class="hero-slides" aria-hidden="true">
         <div
           class="hero-slide"
-          style="background-image: url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg')"
+          style="
+            background-image:
+              url('https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image: url('https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg')"
+          style="
+            background-image:
+              url('https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image: url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg')"
+          style="
+            background-image:
+              url('https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image: url('https://i.pinimg.com/736x/23/bb/34/23bb34cef74594653d6c117af0300389.jpg')"
+          style="
+            background-image:
+              url('https://i.pinimg.com/736x/e6/0b/e7/e60be71086090d2d3f2737b2291242a9.jpg');
+          "
         ></div>
       </div>
 
       <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-light" aria-hidden="true"></div>
 
       <div class="hero-content">
         <div class="container hero-grid">
@@ -2167,34 +2204,48 @@
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#booking">
+              <a class="button button-primary" href="tel:+17124772828">
                 Book Now
+
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path
+                    d="M7.2 4.8c.5-.5 1.3-.5 1.8 0l2 2c.5.5.5 1.2.1 1.7l-1.2 1.5c1 2 2.1 3.1 4.1 4.1l1.5-1.2c.5-.4 1.3-.4 1.7.1l2 2c.5.5.5 1.3 0 1.8l-1.1 1.1c-.8.8-2 1.2-3.1.9-5.3-1.3-9.5-5.5-10.8-10.8-.3-1.1.1-2.3.9-3.1l1.1-1.1Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </a>
 
-              <a class="button button-outline" href="tel:+17124772828">
-                Call 712-477-2828
+              <a class="button button-outline" href="#services">
+                View Services
               </a>
             </div>
 
-            <div class="hero-indicators" id="heroIndicators" aria-label="Hero image controls"></div>
+            <div
+              class="hero-indicators"
+              id="heroIndicators"
+              aria-label="Hero image controls"
+            ></div>
           </div>
 
           <aside class="hero-aside" aria-label="Business information">
             <p class="hero-aside-label">Visit Asian Health Massage</p>
+
             <h2>Time set aside for you.</h2>
+
             <p>
               Choose the appointment length and experience that best suits the
               way you would like to relax.
             </p>
 
             <div class="hero-contact-row">
-              <a href="#contact">
+              <div>
                 <span>Business hours</span>
                 <span>9:00 AM–9:00 PM</span>
-              </a>
+              </div>
+
               <a href="#contact">
                 <span>Location</span>
                 <span>Larchwood, IA</span>
@@ -2210,17 +2261,20 @@
             <span class="trust-dot"></span>
             Quiet Atmosphere
           </div>
+
           <div class="trust-item">
             <span class="trust-dot"></span>
             Private Experience
           </div>
+
           <div class="trust-item">
             <span class="trust-dot"></span>
             Thoughtful Comfort
           </div>
+
           <div class="trust-item">
             <span class="trust-dot"></span>
-            Simple Booking
+            Easy Phone Booking
           </div>
         </div>
       </div>
@@ -2229,6 +2283,7 @@
     <!-- =====================================================
          ABOUT
     ====================================================== -->
+
     <section class="about section-space" id="about" aria-labelledby="aboutTitle">
       <div class="container about-grid">
         <div class="about-collage reveal">
@@ -2244,7 +2299,7 @@
           <figure class="about-image about-image-secondary">
             <img
               src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
-              alt="Warm spa details and comfortable treatment setting"
+              alt="Warm spa details in a comfortable treatment setting"
               loading="lazy"
               onerror="this.style.display='none'"
             />
@@ -2257,6 +2312,7 @@
 
         <div class="about-content reveal">
           <span class="eyebrow">About the experience</span>
+
           <h2 class="section-title" id="aboutTitle">
             A calm pause in the middle of your day.
           </h2>
@@ -2277,8 +2333,10 @@
           <div class="about-highlights">
             <article class="about-highlight">
               <span class="highlight-number">01</span>
+
               <div>
                 <h3>Quiet surroundings</h3>
+
                 <p>
                   A softer environment designed to help you step away from
                   everyday noise and settle into the moment.
@@ -2288,8 +2346,10 @@
 
             <article class="about-highlight">
               <span class="highlight-number">02</span>
+
               <div>
                 <h3>Clean, considered spaces</h3>
+
                 <p>
                   Treatment areas are presented with comfort, simplicity, and
                   an uncluttered sense of calm in mind.
@@ -2299,11 +2359,13 @@
 
             <article class="about-highlight">
               <span class="highlight-number">03</span>
+
               <div>
                 <h3>Private time to unwind</h3>
+
                 <p>
-                  Your appointment is an opportunity to slow down, breathe more
-                  easily, and enjoy uninterrupted rest.
+                  Your appointment is an opportunity to slow down and enjoy
+                  uninterrupted personal time.
                 </p>
               </div>
             </article>
@@ -2315,6 +2377,7 @@
     <!-- =====================================================
          EXPERIENCE
     ====================================================== -->
+
     <section
       class="experience section-space"
       id="experience"
@@ -2323,19 +2386,23 @@
       <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow">The visit</span>
+
           <h2 class="section-title" id="experienceTitle">
             An experience shaped around ease.
           </h2>
+
           <p class="section-copy">
             A simple sequence of thoughtful moments helps each appointment feel
-            composed, comfortable, and restorative.
+            composed, comfortable, and restful.
           </p>
         </div>
 
         <div class="experience-grid reveal">
           <article class="experience-card">
             <span class="experience-step">01</span>
+
             <h3>Calm arrival</h3>
+
             <p>
               Arrive a few minutes early, settle in, and allow the transition
               from the outside world to feel unhurried.
@@ -2344,7 +2411,9 @@
 
           <article class="experience-card">
             <span class="experience-step">02</span>
+
             <h3>Personal selection</h3>
+
             <p>
               Choose from the listed appointment options and let us know the
               duration and experience you prefer.
@@ -2353,7 +2422,9 @@
 
           <article class="experience-card">
             <span class="experience-step">03</span>
+
             <h3>Private comfort</h3>
+
             <p>
               Enjoy a quieter setting arranged to support personal space,
               warmth, and uninterrupted relaxation.
@@ -2362,7 +2433,9 @@
 
           <article class="experience-card">
             <span class="experience-step">04</span>
+
             <h3>Restful finish</h3>
+
             <p>
               Take a moment before returning to your day, allowing the calm of
               your visit to linger a little longer.
@@ -2374,10 +2447,8 @@
 
     <!-- =====================================================
          SERVICES & PRICING
-         Foot Reflexology correction applied:
-         40 minutes = $60
-         60 minutes = $65
     ====================================================== -->
+
     <section
       class="services section-space"
       id="services"
@@ -2386,20 +2457,23 @@
       <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow">Services & pricing</span>
+
           <h2 class="section-title" id="servicesTitle">
             Choose the time that feels right.
           </h2>
+
           <p class="section-copy">
             Explore the services and appointment lengths currently listed by
-            Asian Health Massage. Call ahead with any questions before booking.
+            Asian Health Massage. Call ahead to confirm availability.
           </p>
         </div>
 
         <div class="service-list">
           <!-- Oil Treatment Massage -->
+
           <article class="service-card reveal">
             <div
-              class="service-carousel"
+              class="service-media"
               data-carousel
               data-interval="4700"
               aria-label="Oil Treatment Massage image gallery"
@@ -2412,6 +2486,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg"
@@ -2420,10 +2495,11 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg"
-                  alt="Comfortable massage appointment with oil treatment"
+                  alt="Comfortable oil massage appointment"
                   loading="lazy"
                   onerror="this.style.display='none'"
                 />
@@ -2432,14 +2508,35 @@
               <div class="carousel-dots" aria-label="Choose image"></div>
 
               <div class="carousel-controls">
-                <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  aria-label="Previous image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M15 18l-6-6 6-6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                <button class="carousel-button carousel-next" type="button" aria-label="Next image">
+
+                <button
+                  class="carousel-button carousel-next"
+                  type="button"
+                  aria-label="Next image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -2447,6 +2544,7 @@
 
             <div class="service-content">
               <span class="service-label">Full-body relaxation</span>
+
               <h3>Oil Treatment Massage</h3>
 
               <p class="service-description">
@@ -2462,21 +2560,34 @@
               </div>
 
               <ul class="price-list" aria-label="Oil Treatment Massage pricing">
-                <li><span>30 minutes</span><strong>$50</strong></li>
-                <li><span>60 minutes</span><strong>$70</strong></li>
-                <li><span>90 minutes</span><strong>$100</strong></li>
+                <li>
+                  <span>30 minutes</span>
+                  <strong>$50</strong>
+                </li>
+
+                <li>
+                  <span>60 minutes</span>
+                  <strong>$70</strong>
+                </li>
+
+                <li>
+                  <span>90 minutes</span>
+                  <strong>$100</strong>
+                </li>
               </ul>
 
-              <a class="service-link" href="#booking">
-                Request this service <span aria-hidden="true">→</span>
+              <a class="service-link" href="tel:+17124772828">
+                Call to book
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
           <!-- Four Hands Massage -->
+
           <article class="service-card reveal">
             <div
-              class="service-carousel"
+              class="service-media"
               data-carousel
               data-interval="5200"
               aria-label="Four Hands Massage image gallery"
@@ -2489,6 +2600,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg"
@@ -2497,6 +2609,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg"
@@ -2509,14 +2622,35 @@
               <div class="carousel-dots" aria-label="Choose image"></div>
 
               <div class="carousel-controls">
-                <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  aria-label="Previous image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M15 18l-6-6 6-6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                <button class="carousel-button carousel-next" type="button" aria-label="Next image">
+
+                <button
+                  class="carousel-button carousel-next"
+                  type="button"
+                  aria-label="Next image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -2524,6 +2658,7 @@
 
             <div class="service-content">
               <span class="service-label">Coordinated relaxation</span>
+
               <h3>Four Hands Massage</h3>
 
               <p class="service-description">
@@ -2534,78 +2669,59 @@
 
               <div class="service-benefit">
                 Suited to guests seeking a more immersive massage experience
-                and a stronger sense of uninterrupted, full-body relaxation.
+                and a stronger sense of uninterrupted full-body relaxation.
               </div>
 
               <ul class="price-list" aria-label="Four Hands Massage pricing">
-                <li><span>30 minutes</span><strong>$100</strong></li>
-                <li><span>60 minutes</span><strong>$140</strong></li>
-                <li><span>90 minutes</span><strong>$200</strong></li>
+                <li>
+                  <span>30 minutes</span>
+                  <strong>$100</strong>
+                </li>
+
+                <li>
+                  <span>60 minutes</span>
+                  <strong>$140</strong>
+                </li>
+
+                <li>
+                  <span>90 minutes</span>
+                  <strong>$200</strong>
+                </li>
               </ul>
 
-              <a class="service-link" href="#booking">
-                Request this service <span aria-hidden="true">→</span>
+              <a class="service-link" href="tel:+17124772828">
+                Call to book
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
           <!-- Swedish Touch Offers Reiki -->
+
           <article class="service-card reveal">
             <div
-              class="service-carousel"
-              data-carousel
-              data-interval="4900"
-              aria-label="Swedish Touch offers Reiki image gallery"
+              class="service-media"
+              aria-label="Swedish Touch Offers Reiki image"
             >
-              <div class="service-slide is-active">
+              <div class="single-service-image">
                 <img
-                  src="https://i.pinimg.com/736x/9f/b3/89/9fb38928bba97c97b13dfdd555a23ccf.jpg"
-                  alt="Gentle Reiki-inspired touch above the back"
+                  src="https://i.pinimg.com/736x/ac/ef/09/acef09f3c78cf98b274407146cd9eca6.jpg"
+                  alt="Hands placed gently near the head during a Reiki session"
                   loading="lazy"
                   onerror="this.style.display='none'"
                 />
-              </div>
-              <div class="service-slide">
-                <img
-                  src="https://i.pinimg.com/736x/b6/71/a6/b671a6810c085786a0fd8972977ac1b9.jpg"
-                  alt="Quiet Reiki hand placement experience"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-              <div class="service-slide">
-                <img
-                  src="https://i.pinimg.com/736x/a9/23/02/a9230230029cb1591deb813f92858d38.jpg"
-                  alt="Calm hands-on Reiki atmosphere"
-                  loading="lazy"
-                  onerror="this.style.display='none'"
-                />
-              </div>
-
-              <div class="carousel-dots" aria-label="Choose image"></div>
-
-              <div class="carousel-controls">
-                <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <button class="carousel-button carousel-next" type="button" aria-label="Next image">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
               </div>
             </div>
 
             <div class="service-content">
               <span class="service-label">Stillness & gentle touch</span>
+
               <h3>Swedish Touch Offers Reiki</h3>
 
               <p class="service-description">
-                A quiet experience combining a Swedish-style touch with the
+                A quiet experience combining Swedish-style touch with the
                 still, gentle character associated with Reiki. The focus is on
-                rest, calm, and a peaceful pause from everyday demands.
+                calm, comfort, and a peaceful pause from everyday demands.
               </p>
 
               <div class="service-benefit">
@@ -2613,22 +2729,38 @@
                 would like time centered on stillness rather than intensity.
               </div>
 
-              <ul class="price-list" aria-label="Swedish Touch offers Reiki pricing">
-                <li><span>30 minutes</span><strong>$80</strong></li>
-                <li><span>60 minutes</span><strong>$110</strong></li>
-                <li><span>90 minutes</span><strong>$160</strong></li>
+              <ul
+                class="price-list"
+                aria-label="Swedish Touch Offers Reiki pricing"
+              >
+                <li>
+                  <span>30 minutes</span>
+                  <strong>$80</strong>
+                </li>
+
+                <li>
+                  <span>60 minutes</span>
+                  <strong>$110</strong>
+                </li>
+
+                <li>
+                  <span>90 minutes</span>
+                  <strong>$160</strong>
+                </li>
               </ul>
 
-              <a class="service-link" href="#booking">
-                Request this service <span aria-hidden="true">→</span>
+              <a class="service-link" href="tel:+17124772828">
+                Call to book
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
           <!-- Foot Reflexology -->
+
           <article class="service-card reveal">
             <div
-              class="service-carousel"
+              class="service-media"
               data-carousel
               data-interval="5100"
               aria-label="Foot Reflexology image gallery"
@@ -2641,6 +2773,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg"
@@ -2649,6 +2782,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg"
@@ -2657,6 +2791,7 @@
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
                   src="https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg"
@@ -2669,14 +2804,35 @@
               <div class="carousel-dots" aria-label="Choose image"></div>
 
               <div class="carousel-controls">
-                <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  aria-label="Previous image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M15 18l-6-6 6-6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                <button class="carousel-button carousel-next" type="button" aria-label="Next image">
+
+                <button
+                  class="carousel-button carousel-next"
+                  type="button"
+                  aria-label="Next image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -2684,6 +2840,7 @@
 
             <div class="service-content">
               <span class="service-label">Focused foot relaxation</span>
+
               <h3>Foot Reflexology</h3>
 
               <p class="service-description">
@@ -2697,40 +2854,66 @@
                 a longer full-body session.
               </div>
 
-              <!-- Corrected rates supplied by the store owner -->
               <ul class="price-list" aria-label="Foot Reflexology pricing">
-                <li><span>30 minutes</span><strong>$40</strong></li>
-                <li><span>40 minutes</span><strong>$60</strong></li>
-                <li><span>60 minutes</span><strong>$65</strong></li>
-                <li><span>90 minutes</span><strong>$90</strong></li>
+                <li>
+                  <span>30 minutes</span>
+                  <strong>$40</strong>
+                </li>
+
+                <li>
+                  <span>40 minutes</span>
+                  <strong>$60</strong>
+                </li>
+
+                <li>
+                  <span>60 minutes</span>
+                  <strong>$65</strong>
+                </li>
+
+                <li>
+                  <span>90 minutes</span>
+                  <strong>$90</strong>
+                </li>
               </ul>
 
-              <a class="service-link" href="#booking">
-                Request this service <span aria-hidden="true">→</span>
+              <a class="service-link" href="tel:+17124772828">
+                Call to book
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
           <!-- Table Shower -->
+
           <article class="service-card compact-service reveal">
             <div
-              class="service-carousel"
+              class="service-media"
               data-carousel
               data-interval="5300"
               aria-label="Table Shower image gallery"
             >
               <div class="service-slide is-active">
                 <img
-                  src="https://i.pinimg.com/736x/23/bb/34/23bb34cef74594653d6c117af0300389.jpg"
-                  alt="Clean spa shower room"
+                  src="https://i.pinimg.com/736x/dc/e9/e0/dce9e0a2c95ac760543c586eab10e17a.jpg"
+                  alt="Vichy table shower room with overhead shower jets"
                   loading="lazy"
                   onerror="this.style.display='none'"
                 />
               </div>
+
               <div class="service-slide">
                 <img
-                  src="https://i.pinimg.com/736x/19/51/a6/1951a681c6f1367419093f9ad789d8c1.jpg"
-                  alt="Luxury shower environment"
+                  src="https://i.pinimg.com/736x/28/7b/b3/287bb3e1752b789eede11b5d24bece13.jpg"
+                  alt="Table shower treatment bed with multiple water jets"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+
+              <div class="service-slide">
+                <img
+                  src="https://i.pinimg.com/736x/68/5b/33/685b3303df5076b762666501c8bbd45d.jpg"
+                  alt="Spa Vichy shower treatment room"
                   loading="lazy"
                   onerror="this.style.display='none'"
                 />
@@ -2739,14 +2922,35 @@
               <div class="carousel-dots" aria-label="Choose image"></div>
 
               <div class="carousel-controls">
-                <button class="carousel-button carousel-prev" type="button" aria-label="Previous image">
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  aria-label="Previous image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M15 18l-6-6 6-6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                <button class="carousel-button carousel-next" type="button" aria-label="Next image">
+
+                <button
+                  class="carousel-button carousel-next"
+                  type="button"
+                  aria-label="Next image"
+                >
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -2754,20 +2958,25 @@
 
             <div class="service-content">
               <span class="service-label">Listed add-on</span>
+
               <h3>Table Shower</h3>
 
               <p class="service-description">
                 A table shower option is listed for an additional charge.
-                Please call ahead to confirm details when arranging your
-                appointment.
+                Please call ahead to confirm details and availability when
+                arranging your appointment.
               </p>
 
               <ul class="price-list" aria-label="Table Shower pricing">
-                <li><span>Add-on</span><strong>$10</strong></li>
+                <li>
+                  <span>Add-on</span>
+                  <strong>$10</strong>
+                </li>
               </ul>
 
-              <a class="service-link" href="#booking">
-                Ask when booking <span aria-hidden="true">→</span>
+              <a class="service-link" href="tel:+17124772828">
+                Ask when booking
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -2778,13 +2987,16 @@
     <!-- =====================================================
          GALLERY
     ====================================================== -->
+
     <section class="gallery section-space" aria-labelledby="galleryTitle">
       <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow">Atmosphere</span>
+
           <h2 class="section-title" id="galleryTitle">
             Warm light. Quiet details. Time to exhale.
           </h2>
+
           <p class="section-copy">
             A visual expression of the calm, private, and comfortable
             atmosphere we want each visit to convey.
@@ -2799,6 +3011,7 @@
               loading="lazy"
               onerror="this.style.display='none'"
             />
+
             <figcaption class="gallery-caption">
               <span>Room to slow down</span>
               <span>Atmosphere</span>
@@ -2812,6 +3025,7 @@
               loading="lazy"
               onerror="this.style.display='none'"
             />
+
             <figcaption class="gallery-caption">
               <span>Thoughtful comfort</span>
               <span>Details</span>
@@ -2825,6 +3039,7 @@
               loading="lazy"
               onerror="this.style.display='none'"
             />
+
             <figcaption class="gallery-caption">
               <span>Unhurried rhythm</span>
               <span>Experience</span>
@@ -2838,6 +3053,7 @@
               loading="lazy"
               onerror="this.style.display='none'"
             />
+
             <figcaption class="gallery-caption">
               <span>A softer pace</span>
               <span>Rest</span>
@@ -2848,122 +3064,52 @@
     </section>
 
     <!-- =====================================================
-         BOOKING
+         DIRECT RESERVATION CTA — NO INFORMATION FORM
     ====================================================== -->
-    <section
-      class="booking section-space"
-      id="booking"
-      aria-labelledby="bookingTitle"
-    >
+
+    <section class="reservation section-space" aria-labelledby="reserveTitle">
       <div class="container">
-        <div class="booking-shell reveal">
-          <div class="booking-intro">
-            <span class="eyebrow">Reservation request</span>
-            <h2 id="bookingTitle">Plan your time to unwind.</h2>
+        <div class="reservation-shell reveal">
+          <div class="reservation-copy">
+            <span class="eyebrow">Plan your visit</span>
+
+            <h2 id="reserveTitle">
+              Reserve your appointment with a simple phone call.
+            </h2>
+
             <p>
-              Complete the request form and then call the store to confirm
-              availability. The form is provided for planning purposes and does
-              not submit an appointment automatically.
+              Call Asian Health Massage to ask about availability, select your
+              preferred service, and confirm the appointment length that works
+              best for your schedule.
             </p>
 
-            <div class="booking-details">
-              <div class="booking-detail">
-                <span>Phone</span>
-                <a href="tel:+17124772828">712-477-2828</a>
-              </div>
+            <div class="reservation-actions">
+              <a class="button button-primary" href="tel:+17124772828">
+                Call 712-477-2828
+              </a>
 
-              <div class="booking-detail">
-                <span>Address</span>
-                <strong>938 Broadway St, Larchwood, IA 51241</strong>
-              </div>
-
-              <div class="booking-detail">
-                <span>Business hours</span>
-                <strong>9:00 AM–9:00 PM</strong>
-              </div>
+              <a class="button button-outline" href="#contact">
+                View Location
+              </a>
             </div>
           </div>
 
-          <form class="booking-form" id="bookingForm">
-            <div class="form-heading">
-              <h3>Appointment details</h3>
-              <p>
-                Select only from the services currently listed by Asian Health
-                Massage.
-              </p>
+          <div class="reservation-details">
+            <div class="reservation-detail">
+              <span>Phone</span>
+              <a href="tel:+17124772828">712-477-2828</a>
             </div>
 
-            <div class="form-grid">
-              <div class="form-field">
-                <label for="guestName">Name</label>
-                <input
-                  id="guestName"
-                  name="guestName"
-                  type="text"
-                  autocomplete="name"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label for="guestPhone">Phone</label>
-                <input
-                  id="guestPhone"
-                  name="guestPhone"
-                  type="tel"
-                  autocomplete="tel"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label for="serviceChoice">Service</label>
-                <select id="serviceChoice" name="serviceChoice" required>
-                  <option value="">Select a service</option>
-                  <option>Oil Treatment Massage</option>
-                  <option>Four Hands Massage</option>
-                  <option>Swedish Touch Offers Reiki</option>
-                  <option>Foot Reflexology</option>
-                  <option>Table Shower</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label for="preferredTime">Preferred date and time</label>
-                <input
-                  id="preferredTime"
-                  name="preferredTime"
-                  type="datetime-local"
-                  required
-                />
-              </div>
-
-              <div class="form-field full-width">
-                <label for="bookingNotes">Notes</label>
-                <textarea
-                  id="bookingNotes"
-                  name="bookingNotes"
-                  placeholder="Preferred appointment length or anything you would like to ask when confirming."
-                ></textarea>
-              </div>
+            <div class="reservation-detail">
+              <span>Address</span>
+              <strong>938 Broadway St, Larchwood, IA 51241</strong>
             </div>
 
-            <div class="form-actions">
-              <button class="button button-dark" type="submit">
-                Prepare Request
-              </button>
-              <p class="form-note">
-                Please call 712-477-2828 to confirm your appointment.
-              </p>
+            <div class="reservation-detail">
+              <span>Business hours</span>
+              <strong>9:00 AM–9:00 PM</strong>
             </div>
-
-            <div
-              class="form-status"
-              id="formStatus"
-              role="status"
-              aria-live="polite"
-            ></div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -2971,17 +3117,20 @@
     <!-- =====================================================
          REVIEWS
     ====================================================== -->
+
     <section
       class="reviews section-space"
       id="reviews"
       aria-labelledby="reviewsTitle"
     >
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading centered reveal">
           <span class="eyebrow">Guest impressions</span>
+
           <h2 class="section-title" id="reviewsTitle">
             The kind of visit guests remember.
           </h2>
+
           <p class="section-copy">
             Calm surroundings, a welcoming arrival, and an easy booking
             experience are often the details that make time away feel special.
@@ -2993,46 +3142,56 @@
         <div class="marquee-group">
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “The atmosphere was quiet from the moment I walked in. It was
               exactly the pause I needed after a long week.”
             </blockquote>
+
             <div class="review-author">Local guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “The room felt comfortable, private, and very clean. Booking by
               phone was simple and straightforward.”
             </blockquote>
+
             <div class="review-author">Recent visitor</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “I appreciated how calm everything felt. There was no rush, and I
               had time to settle in before my appointment.”
             </blockquote>
+
             <div class="review-author">Returning guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “A peaceful place to step away from a busy day. The environment
               was warm, quiet, and thoughtfully arranged.”
             </blockquote>
+
             <div class="review-author">Larchwood guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “The appointment options were easy to understand, and the space
               had a relaxing, uncluttered feeling.”
             </blockquote>
+
             <div class="review-author">First-time visitor</div>
           </article>
         </div>
@@ -3040,46 +3199,56 @@
         <div class="marquee-group" aria-hidden="true">
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “The atmosphere was quiet from the moment I walked in. It was
               exactly the pause I needed after a long week.”
             </blockquote>
+
             <div class="review-author">Local guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “The room felt comfortable, private, and very clean. Booking by
               phone was simple and straightforward.”
             </blockquote>
+
             <div class="review-author">Recent visitor</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “I appreciated how calm everything felt. There was no rush, and I
               had time to settle in before my appointment.”
             </blockquote>
+
             <div class="review-author">Returning guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “A peaceful place to step away from a busy day. The environment
               was warm, quiet, and thoughtfully arranged.”
             </blockquote>
+
             <div class="review-author">Larchwood guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “The appointment options were easy to understand, and the space
               had a relaxing, uncluttered feeling.”
             </blockquote>
+
             <div class="review-author">First-time visitor</div>
           </article>
         </div>
@@ -3089,46 +3258,56 @@
         <div class="marquee-group">
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “I left feeling rested and glad I had taken the time for myself.
               The quiet setting made a real difference.”
             </blockquote>
+
             <div class="review-author">Evening guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “Everything felt neat and welcoming. The visit was relaxed from
               arrival through the end of the appointment.”
             </blockquote>
+
             <div class="review-author">Broadway Street visitor</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “The longer business hours made scheduling much easier. I also
               appreciated the calm, private atmosphere.”
             </blockquote>
+
             <div class="review-author">Busy professional</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “A comfortable experience without unnecessary fuss. The simple,
               peaceful environment helped me switch off.”
             </blockquote>
+
             <div class="review-author">Weekend guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars" aria-label="Five stars">★★★★★</div>
+
             <blockquote>
               “Calling ahead was easy, the location was convenient, and the
               room had a warm atmosphere that felt inviting.”
             </blockquote>
+
             <div class="review-author">Area resident</div>
           </article>
         </div>
@@ -3136,46 +3315,56 @@
         <div class="marquee-group" aria-hidden="true">
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “I left feeling rested and glad I had taken the time for myself.
               The quiet setting made a real difference.”
             </blockquote>
+
             <div class="review-author">Evening guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “Everything felt neat and welcoming. The visit was relaxed from
               arrival through the end of the appointment.”
             </blockquote>
+
             <div class="review-author">Broadway Street visitor</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “The longer business hours made scheduling much easier. I also
               appreciated the calm, private atmosphere.”
             </blockquote>
+
             <div class="review-author">Busy professional</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “A comfortable experience without unnecessary fuss. The simple,
               peaceful environment helped me switch off.”
             </blockquote>
+
             <div class="review-author">Weekend guest</div>
           </article>
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
+
             <blockquote>
               “Calling ahead was easy, the location was convenient, and the
               room had a warm atmosphere that felt inviting.”
             </blockquote>
+
             <div class="review-author">Area resident</div>
           </article>
         </div>
@@ -3185,13 +3374,16 @@
     <!-- =====================================================
          FAQ
     ====================================================== -->
+
     <section class="faq section-space" id="faq" aria-labelledby="faqTitle">
       <div class="container faq-layout">
         <div class="faq-intro reveal">
           <span class="eyebrow">Before your visit</span>
+
           <h2 class="section-title" id="faqTitle">
             Helpful details for a smoother arrival.
           </h2>
+
           <p class="section-copy">
             For service availability or questions specific to your
             appointment, please call 712-477-2828.
@@ -3211,6 +3403,7 @@
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
             </h3>
+
             <div class="faq-answer" id="faq-answer-1">
               <div class="faq-answer-inner">
                 Arriving approximately 5–10 minutes before your scheduled time
@@ -3232,13 +3425,13 @@
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
             </h3>
+
             <div class="faq-answer" id="faq-answer-2">
               <div class="faq-answer-inner">
                 Please speak with an appropriate healthcare professional before
                 booking if you have a recent injury, significant pain, a
                 medical condition, or concerns about whether massage is
-                suitable for you. Share relevant limitations when arranging
-                the appointment.
+                suitable for you.
               </div>
             </div>
           </article>
@@ -3255,6 +3448,7 @@
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
             </h3>
+
             <div class="faq-answer" id="faq-answer-3">
               <div class="faq-answer-inner">
                 Please call as soon as possible if your plans change. Ask about
@@ -3276,6 +3470,7 @@
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
             </h3>
+
             <div class="faq-answer" id="faq-answer-4">
               <div class="faq-answer-inner">
                 For the most current parking guidance near 938 Broadway Street,
@@ -3290,13 +3485,20 @@
     <!-- =====================================================
          CONTACT
     ====================================================== -->
-    <section class="contact" id="contact" aria-labelledby="contactTitle">
-      <div class="container contact-top">
+
+    <section
+      class="contact section-space"
+      id="contact"
+      aria-labelledby="contactTitle"
+    >
+      <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow">Contact & location</span>
+
           <h2 class="section-title" id="contactTitle">
             Your quiet pause is closer than you think.
           </h2>
+
           <p class="section-copy">
             Find Asian Health Massage on Broadway Street in Larchwood. Call to
             ask about availability and confirm your preferred appointment.
@@ -3309,16 +3511,23 @@
 
             <div class="contact-card">
               <span>Address</span>
-              <address>938 Broadway St, Larchwood, IA 51241</address>
+
+              <address>
+                938 Broadway St, Larchwood, IA 51241
+              </address>
             </div>
 
             <div class="contact-card">
               <span>Phone</span>
-              <a href="tel:+17124772828">712-477-2828</a>
+
+              <a href="tel:+17124772828">
+                712-477-2828
+              </a>
             </div>
 
             <div class="contact-card">
               <span>Business hours</span>
+
               <p>9:00 AM–9:00 PM</p>
             </div>
 
@@ -3355,11 +3564,13 @@
   <!-- =======================================================
        FOOTER
   ======================================================== -->
+
   <footer class="site-footer">
     <div class="container footer-main">
       <div class="footer-brand">
         <a class="brand" href="#home" aria-label="Return to home">
           <span class="brand-mark" aria-hidden="true">A</span>
+
           <span class="brand-copy">
             <strong>Asian Health Massage</strong>
             <span>Larchwood, Iowa</span>
@@ -3374,17 +3585,19 @@
 
       <div class="footer-column">
         <h3>Quick navigation</h3>
+
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="#services">Services & Pricing</a>
           <a href="#experience">Experience</a>
-          <a href="#booking">Booking</a>
+          <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
         </div>
       </div>
 
       <div class="footer-column">
         <h3>Visit</h3>
+
         <div class="footer-links">
           <a href="tel:+17124772828">712-477-2828</a>
           <span>938 Broadway St</span>
@@ -3396,17 +3609,21 @@
 
     <div class="container footer-bottom">
       <span>
-        © <span id="currentYear"></span> Asian Health Massage. All rights
-        reserved.
+        © <span id="currentYear"></span>
+        Asian Health Massage. All rights reserved.
       </span>
-      <span>Quiet surroundings. Thoughtful comfort.</span>
+
+      <span>
+        Quiet surroundings. Thoughtful comfort.
+      </span>
     </div>
   </footer>
 
   <script>
     /* =========================================================
-       1. HEADER SCROLL STATE
+       HEADER SCROLL STATE
     ========================================================= */
+
     const siteHeader = document.getElementById("siteHeader");
 
     function updateHeader() {
@@ -3414,29 +3631,44 @@
     }
 
     updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
+
+    window.addEventListener("scroll", updateHeader, {
+      passive: true
+    });
 
     /* =========================================================
-       2. MOBILE NAVIGATION
+       MOBILE NAVIGATION
     ========================================================= */
+
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const mobileLinks = mobileMenu.querySelectorAll("a");
 
     function closeMobileMenu() {
       menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
       mobileMenu.classList.remove("is-open");
       document.body.classList.remove("menu-open");
     }
 
     menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      const isOpen =
+        menuToggle.getAttribute("aria-expanded") === "true";
 
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
       menuToggle.setAttribute(
         "aria-label",
-        isOpen ? "Open navigation menu" : "Close navigation menu"
+        isOpen
+          ? "Open navigation menu"
+          : "Close navigation menu"
       );
 
       mobileMenu.classList.toggle("is-open", !isOpen);
@@ -3454,38 +3686,67 @@
     });
 
     /* =========================================================
-       3. HERO BACKGROUND CAROUSEL
+       REDUCED MOTION
     ========================================================= */
-    const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
-    const heroIndicators = document.getElementById("heroIndicators");
+
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    let heroIndex = Math.floor(Math.random() * heroSlides.length);
+    /* =========================================================
+       HERO BACKGROUND CAROUSEL
+    ========================================================= */
+
+    const heroSlides = Array.from(
+      document.querySelectorAll(".hero-slide")
+    );
+
+    const heroIndicators =
+      document.getElementById("heroIndicators");
+
+    let heroIndex =
+      Math.floor(Math.random() * heroSlides.length);
+
     let heroTimer;
 
     function showHeroSlide(index) {
-      heroIndex = (index + heroSlides.length) % heroSlides.length;
+      heroIndex =
+        (index + heroSlides.length) % heroSlides.length;
 
       heroSlides.forEach((slide, slideIndex) => {
-        slide.classList.toggle("is-active", slideIndex === heroIndex);
-      });
-
-      Array.from(heroIndicators.children).forEach((indicator, indicatorIndex) => {
-        indicator.classList.toggle("is-active", indicatorIndex === heroIndex);
-        indicator.setAttribute(
-          "aria-current",
-          indicatorIndex === heroIndex ? "true" : "false"
+        slide.classList.toggle(
+          "is-active",
+          slideIndex === heroIndex
         );
       });
+
+      Array.from(heroIndicators.children).forEach(
+        (indicator, indicatorIndex) => {
+          indicator.classList.toggle(
+            "is-active",
+            indicatorIndex === heroIndex
+          );
+
+          indicator.setAttribute(
+            "aria-current",
+            indicatorIndex === heroIndex
+              ? "true"
+              : "false"
+          );
+        }
+      );
     }
 
     heroSlides.forEach((_, index) => {
       const button = document.createElement("button");
+
       button.className = "hero-indicator";
       button.type = "button";
-      button.setAttribute("aria-label", `Show hero image ${index + 1}`);
+
+      button.setAttribute(
+        "aria-label",
+        `Show hero image ${index + 1}`
+      );
 
       button.addEventListener("click", () => {
         showHeroSlide(index);
@@ -3509,123 +3770,185 @@
     restartHeroTimer();
 
     /* =========================================================
-       4. SERVICE IMAGE CAROUSELS
+       SERVICE IMAGE CAROUSELS
     ========================================================= */
-    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-      const slides = Array.from(carousel.querySelectorAll(".service-slide"));
-      const previousButton = carousel.querySelector(".carousel-prev");
-      const nextButton = carousel.querySelector(".carousel-next");
-      const dotsContainer = carousel.querySelector(".carousel-dots");
-      const intervalTime = Number(carousel.dataset.interval) || 5000;
 
-      let currentIndex = 0;
-      let timer;
+    document
+      .querySelectorAll("[data-carousel]")
+      .forEach((carousel) => {
+        const slides = Array.from(
+          carousel.querySelectorAll(".service-slide")
+        );
 
-      if (slides.length <= 1) {
-        if (previousButton) previousButton.hidden = true;
-        if (nextButton) nextButton.hidden = true;
-        if (dotsContainer) dotsContainer.hidden = true;
-        return;
-      }
+        const previousButton =
+          carousel.querySelector(".carousel-prev");
 
-      const dots = slides.map((_, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "carousel-dot";
-        dot.setAttribute("aria-label", `Show image ${index + 1}`);
+        const nextButton =
+          carousel.querySelector(".carousel-next");
 
-        dot.addEventListener("click", () => {
-          showSlide(index);
-          restartTimer();
-        });
+        const dotsContainer =
+          carousel.querySelector(".carousel-dots");
 
-        dotsContainer.appendChild(dot);
-        return dot;
-      });
+        const intervalTime =
+          Number(carousel.dataset.interval) || 5000;
 
-      function showSlide(index) {
-        currentIndex = (index + slides.length) % slides.length;
+        let currentIndex = 0;
+        let timer;
 
-        slides.forEach((slide, slideIndex) => {
-          slide.classList.toggle("is-active", slideIndex === currentIndex);
-          slide.setAttribute(
-            "aria-hidden",
-            slideIndex === currentIndex ? "false" : "true"
-          );
-        });
+        if (slides.length <= 1) {
+          if (previousButton) {
+            previousButton.hidden = true;
+          }
 
-        dots.forEach((dot, dotIndex) => {
-          dot.classList.toggle("is-active", dotIndex === currentIndex);
+          if (nextButton) {
+            nextButton.hidden = true;
+          }
+
+          if (dotsContainer) {
+            dotsContainer.hidden = true;
+          }
+
+          return;
+        }
+
+        const dots = slides.map((_, index) => {
+          const dot = document.createElement("button");
+
+          dot.type = "button";
+          dot.className = "carousel-dot";
+
           dot.setAttribute(
-            "aria-current",
-            dotIndex === currentIndex ? "true" : "false"
+            "aria-label",
+            `Show image ${index + 1}`
           );
+
+          dot.addEventListener("click", () => {
+            showSlide(index);
+            restartTimer();
+          });
+
+          dotsContainer.appendChild(dot);
+
+          return dot;
         });
-      }
 
-      function restartTimer() {
-        window.clearInterval(timer);
+        function showSlide(index) {
+          currentIndex =
+            (index + slides.length) % slides.length;
 
-        if (!reduceMotion) {
-          timer = window.setInterval(() => {
-            showSlide(currentIndex + 1);
-          }, intervalTime);
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle(
+              "is-active",
+              slideIndex === currentIndex
+            );
+
+            slide.setAttribute(
+              "aria-hidden",
+              slideIndex === currentIndex
+                ? "false"
+                : "true"
+            );
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle(
+              "is-active",
+              dotIndex === currentIndex
+            );
+
+            dot.setAttribute(
+              "aria-current",
+              dotIndex === currentIndex
+                ? "true"
+                : "false"
+            );
+          });
         }
-      }
 
-      previousButton.addEventListener("click", () => {
-        showSlide(currentIndex - 1);
-        restartTimer();
-      });
+        function restartTimer() {
+          window.clearInterval(timer);
 
-      nextButton.addEventListener("click", () => {
-        showSlide(currentIndex + 1);
-        restartTimer();
-      });
+          if (!reduceMotion) {
+            timer = window.setInterval(() => {
+              showSlide(currentIndex + 1);
+            }, intervalTime);
+          }
+        }
 
-      carousel.addEventListener("mouseenter", () => {
-        window.clearInterval(timer);
-      });
-
-      carousel.addEventListener("mouseleave", restartTimer);
-
-      carousel.addEventListener("focusin", () => {
-        window.clearInterval(timer);
-      });
-
-      carousel.addEventListener("focusout", (event) => {
-        if (!carousel.contains(event.relatedTarget)) {
+        previousButton.addEventListener("click", () => {
+          showSlide(currentIndex - 1);
           restartTimer();
-        }
-      });
+        });
 
-      showSlide(0);
-      restartTimer();
-    });
+        nextButton.addEventListener("click", () => {
+          showSlide(currentIndex + 1);
+          restartTimer();
+        });
+
+        carousel.addEventListener("mouseenter", () => {
+          window.clearInterval(timer);
+        });
+
+        carousel.addEventListener(
+          "mouseleave",
+          restartTimer
+        );
+
+        carousel.addEventListener("focusin", () => {
+          window.clearInterval(timer);
+        });
+
+        carousel.addEventListener(
+          "focusout",
+          (event) => {
+            if (!carousel.contains(event.relatedTarget)) {
+              restartTimer();
+            }
+          }
+        );
+
+        showSlide(0);
+        restartTimer();
+      });
 
     /* =========================================================
-       5. FAQ ACCORDION
+       FAQ ACCORDION
     ========================================================= */
-    const faqButtons = document.querySelectorAll(".faq-question");
+
+    const faqButtons =
+      document.querySelectorAll(".faq-question");
 
     faqButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        const isExpanded =
+          button.getAttribute("aria-expanded") === "true";
+
         const answer = document.getElementById(
           button.getAttribute("aria-controls")
         );
 
         faqButtons.forEach((otherButton) => {
-          if (otherButton === button) return;
+          if (otherButton === button) {
+            return;
+          }
 
-          otherButton.setAttribute("aria-expanded", "false");
+          otherButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
           const otherAnswer = document.getElementById(
             otherButton.getAttribute("aria-controls")
           );
+
           otherAnswer.style.maxHeight = null;
         });
 
-        button.setAttribute("aria-expanded", String(!isExpanded));
+        button.setAttribute(
+          "aria-expanded",
+          String(!isExpanded)
+        );
+
         answer.style.maxHeight = isExpanded
           ? null
           : `${answer.scrollHeight}px`;
@@ -3634,27 +3957,40 @@
 
     window.addEventListener("resize", () => {
       faqButtons.forEach((button) => {
-        if (button.getAttribute("aria-expanded") === "true") {
+        if (
+          button.getAttribute("aria-expanded") === "true"
+        ) {
           const answer = document.getElementById(
             button.getAttribute("aria-controls")
           );
-          answer.style.maxHeight = `${answer.scrollHeight}px`;
+
+          answer.style.maxHeight =
+            `${answer.scrollHeight}px`;
         }
       });
     });
 
     /* =========================================================
-       6. SCROLL REVEAL
+       SCROLL REVEAL
     ========================================================= */
-    const revealItems = document.querySelectorAll(".reveal");
 
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
+    const revealItems =
+      document.querySelectorAll(".reveal");
+
+    if (
+      reduceMotion ||
+      !("IntersectionObserver" in window)
+    ) {
+      revealItems.forEach((item) => {
+        item.classList.add("is-visible");
+      });
     } else {
       const revealObserver = new IntersectionObserver(
         (entries, observer) => {
           entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+            if (!entry.isIntersecting) {
+              return;
+            }
 
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
@@ -3666,34 +4002,15 @@
         }
       );
 
-      revealItems.forEach((item) => revealObserver.observe(item));
+      revealItems.forEach((item) => {
+        revealObserver.observe(item);
+      });
     }
 
     /* =========================================================
-       7. FRONT-END BOOKING FORM
+       FOOTER YEAR
     ========================================================= */
-    const bookingForm = document.getElementById("bookingForm");
-    const formStatus = document.getElementById("formStatus");
 
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const formData = new FormData(bookingForm);
-      const guestName = String(formData.get("guestName") || "").trim();
-      const service = String(formData.get("serviceChoice") || "").trim();
-
-      formStatus.textContent =
-        `Thank you${guestName ? `, ${guestName}` : ""}. ` +
-        `Your ${service || "appointment"} request has been prepared. ` +
-        `Please call 712-477-2828 to confirm availability and complete the reservation.`;
-
-      formStatus.classList.add("is-visible");
-      formStatus.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
-    });
-
-    /* =========================================================
-       8. FOOTER YEAR
-    ========================================================= */
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
   </script>
